@@ -85,3 +85,18 @@ body {
   background-color: transparent;
   border: 2px solid #2c3b41;
 }
+
+@media (max-width: 420px) {
+  .control-wrap {
+    flex-direction: column;
+  }
+
+  .carousel-dots {
+    align-self: center;
+  }
+
+  .carousel-text {
+    align-self: flex-start;
+    order: 2;
+  }
+}
