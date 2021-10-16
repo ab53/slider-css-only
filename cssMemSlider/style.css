@@ -2,31 +2,35 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 10px;
+}
+
 body {
   padding: 0;
   margin: 0;
-  font-family: Kalam;
+  font-family: 'Kalam', sans-serif;
   background-color: #efefef;
 }
 
 .wrap {
-  margin-top: 24px;
+  margin-top: 2.4rem;
 }
 
 .container {
-  max-width: 720px;
+  max-width: 72rem;
   margin: 0 auto;
-  padding: 0 12px;
+  padding: 0 1.2rem;
 }
 
 .wrap {
-  border-top: 1px dashed #d1d1d1;
-  border-bottom: 1px dashed #d1d1d1;
+  border-top: 0.1rem dashed #d1d1d1;
+  border-bottom: 0.1rem dashed #d1d1d1;
 }
 
 .carousel-wrapper {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 2.4rem;
+  padding-bottom: 2.4rem;
   overflow: hidden;
 }
 
@@ -44,8 +48,8 @@ body {
 
 .carousel-item img {
   max-width: 100%;
-  width: 720px;
-  border-radius: 2px;
+  width: 100%;
+  border-radius: 0.2rem;
 }
 
 .control-wrap {
@@ -58,11 +62,26 @@ body {
 }
 
 .carousel-text {
+  font-size: x-large;
   align-self: center;
 }
 
+.to-left {
+  animation: 0.5s slide-left;
+}
+
+@keyframes slide-left {
+  from {
+    margin-left: 8rem;
+  }
+
+  to {
+    margin-right: 0%;
+  }
+}
+
 .carousel-control {
-  padding: 42px 8px;
+  padding: 4.2rem 0.8rem;
   align-self: center;
   cursor: pointer;
   transition: all 0.5s;
@@ -70,10 +89,10 @@ body {
 
 .carousel-control .carousel-dot {
   display: block;
-  width: 12px;
-  height: 12px;
+  width: 1.2rem;
+  height: 1.2rem;
   background-color: #2c3b41;
-  row-gap: 40px;
+  row-gap: 4rem;
   border-radius: 100%;
 }
 
@@ -83,7 +102,7 @@ body {
 
 .carousel-control.active > .carousel-dot {
   background-color: transparent;
-  border: 2px solid #2c3b41;
+  border: 0.2rem solid #2c3b41;
 }
 
 @media (max-width: 420px) {
@@ -99,4 +118,45 @@ body {
     align-self: flex-start;
     order: 2;
   }
+}
+
+label {
+  display: none;
+}
+
+#slide-1:checked ~ .carousel {
+  transform: translate(0);
+}
+
+#slide-1:checked ~ .l-slide-1 {
+  display: block;
+}
+
+/* ------------------------ */
+#slide-2:checked ~ .carousel {
+  transform: translate(-100%);
+}
+
+#slide-2:checked ~ .l-slide-2 {
+  display: block;
+}
+
+/* ------------------------ */
+
+#slide-3:checked ~ .carousel {
+  transform: translate(-200%);
+}
+
+#slide-3:checked ~ .l-slide-3 {
+  display: block;
+}
+
+/* ------------------------ */
+
+#slide-4:checked ~ .carousel {
+  transform: translate(-300%);
+}
+
+#slide-4:checked ~ .l-slide-4 {
+  display: block;
 }
