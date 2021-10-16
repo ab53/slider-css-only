@@ -6,6 +6,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: Kalam;
+  background-color: #efefef;
 }
 
 .wrap {
@@ -15,11 +16,12 @@ body {
 .container {
   max-width: 720px;
   margin: 0 auto;
+  padding: 0 12px;
 }
 
 .wrap {
-  border-top: 1px dashed #dcdcdc;
-  border-bottom: 1px dashed #dcdcdc;
+  border-top: 1px dashed #d1d1d1;
+  border-bottom: 1px dashed #d1d1d1;
 }
 
 .carousel-wrapper {
@@ -60,7 +62,7 @@ body {
 }
 
 .carousel-control {
-  padding: 42px 12px;
+  padding: 42px 8px;
   align-self: center;
   cursor: pointer;
   transition: all 0.5s;

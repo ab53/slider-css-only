@@ -10,6 +10,11 @@ let slideText = document.querySelector('.carousel-text')
 let dots = document.querySelectorAll('.carousel-control');
 let slideIndex = 0;
 
+// console.log(document.querySelector('.carousel-item').clientWidth)
+
+let image = document.querySelector('.carousel-item');
+let imageWidth = image.clientWidth;
+
 slideText.textContent = text[slideIndex];
 
 dots.forEach(dot => {
@@ -27,6 +32,12 @@ dots.forEach(dot => {
     dots[slideIndex].classList.add('active');
     el.classList.add('active');
     slideText.textContent = text[slideIndex];
-    carousel.style.transform = `translateX(${-720 * slideIndex}px)`;
+    carousel.style.transform = `translateX(${-imageWidth * slideIndex}px)`;
   })
+})
+
+window.addEventListener('resize', e => {
+  imageWidth = image.clientWidth;
+  carousel.style.transform = `translateX(${-imageWidth * slideIndex}px)`;
+  // console.log(e, document.querySelector('.carousel-item').clientWidth)
 })
