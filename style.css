@@ -1,3 +1,29 @@
-body {
-  background-color: aqua;
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.carousel {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.carousel-item {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.carousel-item img {
+  max-width: 100%;
+  width: 800px;
+}
+
+.carousel-item:not(.active) {
+  /* display: none; */
 }
