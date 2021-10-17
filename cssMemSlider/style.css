@@ -107,11 +107,12 @@ body {
 
 .l-slide {
   display: none;
-  width: calc(100% - 145px);
+
+  /* 12.8rem - dots width */
+  width: calc(100% - 12.8rem);
   font-size: 2rem;
   align-self: center;
 }
-
 
 /* ------------------------ */
 #slide-1 {
@@ -127,9 +128,9 @@ body {
   display: block;
 }
 
-#slide-1:checked ~ .s1 {
+#slide-1:checked ~ .s1 > .s11 {
   background-color: transparent;
-  border: 3px solid #25282a;
+  border: 0.3rem solid #25282a;
 }
 
 .s1 {
@@ -150,15 +151,14 @@ body {
   display: block;
 }
 
-#slide-2:checked ~ .s2 {
+#slide-2:checked ~ .s2 > .s22 {
   background-color: transparent;
-  border: 3px solid #25282a;
+  border: 0.3rem solid #25282a;
 }
 
 .s2 {
   order: 2;
 }
-
 
 /* ------------------------ */
 #slide-3 {
@@ -178,9 +178,9 @@ body {
   transform: translate(-200%);
 }
 
-#slide-3:checked ~ .s3 {
+#slide-3:checked ~ .s3 > .s33 {
   background-color: transparent;
-  border: 3px solid #25282a;
+  border: 0.3rem solid #25282a;
 }
 
 .s3 {
@@ -201,9 +201,9 @@ body {
   display: block;
 }
 
-#slide-4:checked ~ .s4 {
+#slide-4:checked ~ .s4 > .s44 {
   background-color: transparent;
-  border: 3px solid #25282a;
+  border: 0.3rem solid #25282a;
 }
 
 .s4 {
@@ -232,15 +232,19 @@ body {
   }
 }
 
-label {
-  width: 16px;
-  height: 16px;
-  margin: 1rem;
+label div {
+  width: 1.6rem;
+  height: 1.6rem;
+  margin: 2rem 0.8rem;
   background-color: #25282a;
   border-radius: 100%;
   cursor: pointer;
 }
 
-.carousel-wrapper ~ label:hover {
+label:hover > div {
   background-color: darkred;
+}
+
+label:hover {
+  cursor: pointer;
 }
