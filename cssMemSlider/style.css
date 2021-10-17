@@ -105,13 +105,18 @@ body {
   border: 0.2rem solid #2c3b41;
 }
 
-label {
+.l-slide {
   display: none;
-  width: calc(100% - 84px);
+  width: calc(100% - 145px);
+  font-size: 2rem;
+  align-self: center;
 }
 
+
+/* ------------------------ */
 #slide-1 {
   order: 1;
+  display: none;
 }
 
 #slide-1:checked ~ .carousel {
@@ -122,9 +127,19 @@ label {
   display: block;
 }
 
+#slide-1:checked ~ .s1 {
+  background-color: transparent;
+  border: 3px solid #25282a;
+}
+
+.s1 {
+  order: 1;
+}
+
 /* ------------------------ */
 #slide-2 {
   order: 2;
+  display: none;
 }
 
 #slide-2:checked ~ .carousel {
@@ -135,9 +150,20 @@ label {
   display: block;
 }
 
+#slide-2:checked ~ .s2 {
+  background-color: transparent;
+  border: 3px solid #25282a;
+}
+
+.s2 {
+  order: 2;
+}
+
+
 /* ------------------------ */
 #slide-3 {
   order: 3;
+  display: none;
 }
 
 #slide-3:checked ~ .carousel {
@@ -148,9 +174,23 @@ label {
   display: block;
 }
 
+#slide-3:checked ~ .carousel {
+  transform: translate(-200%);
+}
+
+#slide-3:checked ~ .s3 {
+  background-color: transparent;
+  border: 3px solid #25282a;
+}
+
+.s3 {
+  order: 3;
+}
+
 /* ------------------------ */
 #slide-4 {
   order: 4;
+  display: none;
 }
 
 #slide-4:checked ~ .carousel {
@@ -160,6 +200,17 @@ label {
 #slide-4:checked ~ .l-slide-4 {
   display: block;
 }
+
+#slide-4:checked ~ .s4 {
+  background-color: transparent;
+  border: 3px solid #25282a;
+}
+
+.s4 {
+  order: 4;
+}
+
+/* ------------------------ */
 
 .carousel-wrapper {
   display: flex;
@@ -175,8 +226,21 @@ label {
     justify-content: center;
   }
 
-  label {
+  .l-slide {
     order: 5;
     width: 100%;
   }
+}
+
+label {
+  width: 16px;
+  height: 16px;
+  margin: 1rem;
+  background-color: #25282a;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.carousel-wrapper ~ label:hover {
+  background-color: darkred;
 }
